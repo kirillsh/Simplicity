@@ -10,8 +10,8 @@ import UIKit
 import SafariServices
 
 public struct AccessTokenResponse {
-    let accessToken: String
-    let params: [String: Any]?
+    public let accessToken: String
+    public let params: [String: Any]?
 }
 
 /// Callback handler after an external login completes.
