@@ -9,8 +9,13 @@
 import UIKit
 import SafariServices
 
+public struct AccessTokenResponse {
+    let accessToken: String
+    let params: [String: Any]?
+}
+
 /// Callback handler after an external login completes.
-public typealias ExternalLoginCallback = (String?, NSError?) -> Void
+public typealias ExternalLoginCallback = (AccessTokenResponse?, NSError?) -> Void
 
 /** 
  Simplicity is a framework for authenticating with external providers on iOS.

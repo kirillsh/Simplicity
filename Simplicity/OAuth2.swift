@@ -98,7 +98,7 @@ public class OAuth2: LoginProvider {
                 return
             }
             
-            callback(accessToken, nil)
+            callback(AccessTokenResponse(accessToken: accessToken, params: url.fragmentAndQueryDictionary), nil)
         case .Custom:
             preconditionFailure("Custom Grant Type Not Supported")
         }

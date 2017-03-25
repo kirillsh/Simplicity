@@ -87,7 +87,7 @@ public class Google: OAuth2 {
                 callback(nil, LoginError.InternalSDKError) // This request should not fail.
                 return
             }
-            callback(accessToken, nil)
+            callback(AccessTokenResponse(accessToken: accessToken, params: json), nil)
         }
         task.resume()
     }
