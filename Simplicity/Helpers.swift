@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Helpers {
+public class Helpers {
     /**
      Returns a list of URL Schemes that match the filter closure.
      
@@ -48,16 +48,16 @@ class Helpers {
 
 extension URL {
     /// Dictionary with key/value pairs from the URL fragment
-    var fragmentDictionary: [String: String] {
+    public var fragmentDictionary: [String: String] {
         return dictionaryFromFormEncodedString(fragment)
     }
     
     /// Dictionary with key/value pairs from the URL query string
-    var queryDictionary: [String: String] {
+    public var queryDictionary: [String: String] {
         return dictionaryFromFormEncodedString(query)
     }
     
-    var fragmentAndQueryDictionary: [String: String] {
+    public var fragmentAndQueryDictionary: [String: String] {
         var result = fragmentDictionary
         queryDictionary.forEach { (key, value) in
             result[key] = value

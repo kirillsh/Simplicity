@@ -17,7 +17,7 @@ import Foundation
  it's a security concern to leave it in your app as it can be sniffed and used 
  for malicious purposes.
  */
-public class OAuth2: LoginProvider {
+open class OAuth2: LoginProvider {
     /// A set of OAuth 2 Scopes to request from the login provider.
     public final var scopes = Set<String>()
     
@@ -78,7 +78,7 @@ public class OAuth2: LoginProvider {
      - url: The OAuth redirect URL
      - callback: A callback that returns with an access token or NSError.
      */
-    public func linkHandler(_ url: URL, callback: @escaping ExternalLoginCallback) {
+    open func linkHandler(_ url: URL, callback: @escaping ExternalLoginCallback) {
         switch grantType {
         case .AuthorizationCode:
             preconditionFailure("Authorization Code Grant Type Not Supported")
