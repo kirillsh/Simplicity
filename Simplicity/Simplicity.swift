@@ -57,15 +57,15 @@ public final class Simplicity {
     }
     
     private static func presentSafariView(_ url: URL) {
-        if #available(iOS 9, *) {
-            safari = SFSafariViewController(url: url)
-            var topController = UIApplication.shared.keyWindow?.rootViewController
-            while let vc = topController?.presentedViewController {
-                topController = vc
-            }
-            topController?.present(safari!, animated: true, completion: nil)
-        } else {
+//        if #available(iOS 9, *) {
+//            safari = SFSafariViewController(url: url)
+//            var topController = UIApplication.shared.keyWindow?.rootViewController
+//            while let vc = topController?.presentedViewController {
+//                topController = vc
+//            }
+//            topController?.present(safari!, animated: true, completion: nil)
+//        } else {
             UIApplication.shared.openURL(url)
-        }
+//        }
     }
 }
